@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-root', //Name of the Component
+  templateUrl: './app.component.html',  //Html file path
+  styleUrls: ['./app.component.css']  //Style Url Path
 })
+// Root Component  
 export class AppComponent {
-  title = 'gagandeep-singh';
+  //Project Title
+  title = 'Mobile-Shop';
+  //Creator Name
+  madeBy = "JEECloudIISGH11 Gagandeep Singh";
+
 }

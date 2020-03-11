@@ -1,0 +1,25 @@
+<table class="table table-hover table-bordered" style="text-align: center;">
+  <thead class="thead-light">
+    <!-- Displays Column Names  -->
+    <!-- Clicking on Id column sorts data by Id by calling srtById method  -->
+    <!-- clickking on name column sorts data by name calling sortByName method  -->
+    <!-- clicking on price column sorts by price calling sortByPrice method  -->
+    <th (click)="sortById()"><button type="button" class="btn btn-link">Mobile ID</button></th>
+    <th (click)="sortByName()"><button type="button" class="btn btn-link">Mobile Name</button></th>
+    <th (click)="sortByPrice()"><button type="button" class="btn btn-link">Mobile Price</button></th>
+    <th ><button type="button" class="btn btn-link" disabled>ACTION</button></th>
+  </thead>
+
+  <!-- Display Data using For Loop -->
+  <!-- Mobile aray is the array present in .ts file of this component  -->
+  <!-- Currency pipe used to display dollar, 'USD' by default  -->
+  <!-- Calls delete method with index as a parameter  -->
+  <!-- Delete Button deletes the specified row from list  -->
+  <tr *ngFor="let mobile of mobileArray; let i = index" >
+    <td> {{mobile.mobId}} </td>
+    <td> {{mobile.mobName}} </td>
+    <td> {{mobile.mobPrice | currency :'USD'}} </td>
+    <td><button (click)="deleteMobile(i)" class="btn btn-danger">Delete</button></td>
+  </tr>
+</table>
+<!-- <table style="border: 1px solid black;"></table> -->
