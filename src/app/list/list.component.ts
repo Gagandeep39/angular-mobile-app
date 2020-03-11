@@ -19,7 +19,8 @@ export class ListComponent implements OnInit {
   constructor(public service: MobileService) {
     setTimeout(() => {
       this.mobileArray = service.fetchAll();
-    }, 150);
+      console.log(this.mobileArray)
+    }, 300);
   }
 
   ngOnInit() {}
